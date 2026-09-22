@@ -87,14 +87,9 @@ function tick(){
   document.getElementById('m').textContent=String(m).padStart(2,'0');
   document.getElementById('s').textContent=String(sec).padStart(2,'0');
 }
-tick(); setInterval(tick,1000);
-function playQuran(){
-  const a=document.getElementById('quranAudio'), b=document.getElementById('quranBtn');
-  a.play().then(()=>{b.textContent='Ⅱ';})
-  .catch(()=>{});
-}
-function toggleQuran(){
-  const a=document.getElementById('quranAudio'), b=document.getElementById('quranBtn');
-  if(a.paused){} else {a.pause(); b.textContent='▶';}
-}
+<!-- Quran Audio -->
+<audio id="quranAudio" autoplay>
+    <source src="quran_audio.m4a" type="audio/mp4">
+    Your browser does not support the audio element.
+</audio>
 </script></body></html>
